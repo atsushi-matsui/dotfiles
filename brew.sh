@@ -20,8 +20,8 @@ ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
-# Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+# Install GNU `sed`.
+brew install gnu-sed
 # Install a modern version of Bash.
 brew install bash
 brew install bash-completion2
@@ -33,13 +33,14 @@ if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
 fi;
 
 # Install `wget` with IRI support.
-brew install wget --with-iri
+#brew install wget --with-iri
 
 # Install GnuPG to enable PGP-signing commits.
 brew install gnupg
 
 # Install more recent versions of some macOS tools.
-brew install vim --with-override-system-vi
+#brew install vim --with-override-system-vi
+brew install vim
 brew install grep
 #brew install openssh
 #brew install screen
@@ -78,8 +79,11 @@ brew install go
 #brew install xpdf
 #brew install xz
 
-# Install infta tools
+# Install GUI apps
 brew install --cask docker
+brew install --cask visual-studio-code
+
+# Install infta tools
 brew install docker-compose
 brew install awscli
 brew install aws-vault
@@ -90,6 +94,7 @@ brew install kubernetes-cli
 #brew install ack
 #brew install exiv2
 brew install git
+brew install gh
 brew install git-lfs
 #brew install gs
 #brew install imagemagick --with-webp
