@@ -19,7 +19,7 @@
 	c = clone --recursive
 
 	# Commit all changes.
-	ca = commit -av
+	ca = commit -av --allow-empty-message -m ''
 
 	# Switch to a branch, creating it if necessary.
 	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
@@ -186,3 +186,7 @@
 
     email = kiburedo0702@gmail.com
     name = atsushi-matsui
+	signingkey = /Users/amatsu/.ssh/id_ed25519.pub
+
+[gpg]
+	format = ssh
